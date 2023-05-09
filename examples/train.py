@@ -19,6 +19,7 @@ def main():
             "had3qn",
             "maddpg",
             "mappo",
+            "hmappo",
         ],
         help="Algorithm name. Choose from: happo, hatrpo, haa2c, haddpg, hatd3, had3qn, maddpg, mappo.",
     )
