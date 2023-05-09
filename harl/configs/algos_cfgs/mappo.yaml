@@ -21,7 +21,7 @@ train:
   # logging interval
   log_interval: 5
   # evaluation interval
-  eval_interval: 25
+  eval_interval: 5
   # whether to use PopArt
   use_popart: True
   # whether to use linear learning rate decay
@@ -36,7 +36,7 @@ eval:
   # number of parallel environments for evaluation
   n_eval_rollout_threads: 10
   # number of episodes per evaluation
-  eval_episodes: 20
+  eval_episodes: 10
 render:
   # whether to use render
   use_render: False

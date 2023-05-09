@@ -336,7 +336,7 @@ class OnPolicyBaseRunner:
             share_obs,  # (n_threads, n_agents, share_obs_dim)
             rewards,  # (n_threads, n_agents, 1)
             dones,  # (n_threads, n_agents)
-            infos,  # type: list, shape: (n_threads, n_agents)
+            infos,  # type list, shape: (n_threads, n_agents)
             available_actions,  # (n_threads, ) of None or (n_threads, n_agents, action_number)
             values,  # EP: (n_threads, dim), FP: (n_threads, n_agents, dim)
             actions,  # (n_threads, n_agents, action_dim)
@@ -671,11 +671,11 @@ class OnPolicyBaseRunner:
                     if eval_dones[0][0]:
                         print(f"total reward of this episode: {rewards}")
                         break
-        if "smac" in self.args["env"]:  # replay for smac, no rendering
-            if "v2" in self.args["env"]:
-                self.envs.env.save_replay()
-            else:
-                self.envs.save_replay()
+        # if "smac" in self.args["env"]:  # replay for smac, no rendering
+        #     if "v2" in self.args["env"]:
+        #         self.envs.env.save_replay()
+        #     else:
+        #         self.envs.save_replay()
 
     def prep_rollout(self):
         """Prepare for rollout."""
